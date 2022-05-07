@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { user } from './app-interface';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'dicoupling-components';
+ users: user[] = [];
+
+ public userAdded(users2: user[]) {
+   this.users = users2;
+ }
+
+  
 }
